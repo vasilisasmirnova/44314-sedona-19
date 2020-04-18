@@ -1,0 +1,30 @@
+.sub-advantages__list {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.sub-advantages__item {
+  margin-top: 40px;
+}
+
+.sub-advantages__description {
+  .grey_text();
+}
+
+@media (min-width: @tablet-width) {
+  .sub-advantages__wrapper {
+    width: 100%;
+  }
+
+  .sub-advantages__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 330px;
+  }
+
+  .sub-advantages__item {
+    width: 33%;
+  }
+}
