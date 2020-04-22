@@ -3,44 +3,58 @@
   list-style: none;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #eeeeee;
+}
+
+.advantages__item {
+  width: 100%;
 }
 
 .advantages__title {
   font-size: 18px;
   line-height: 26px;
-  text-align: center;
 }
 
 .advantages__item--blue {
   background-color: #81b3d2;
   color: #ffffff;
-}
-
-.advantages__item p {
-  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .advantages__image {
-  margin-top: 45px;
+  overflow: hidden;
+}
+
+.advantages__image img {
+  width: 100%;
 }
 
 .advantages__number {
-  margin-top: 18px;
-  margin-bottom: 25px;
-}
-
-.advantages__item--blue .advantages__title {
-  text-align: center;
-  margin-top: 58px;
+  margin-top: 14px;
+  margin-bottom: 18px;
 }
 
 .advantages__item--grey {
-  background-color: #eeeeee;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  .grey_text();
+  width: 87%;
+  border-bottom: solid 1px #d6d6d6;
 }
 
-.advantages__item--grey p {
+.advantages__item--grey:last-child {
+  border: 0;
+}
+
+.advantages__item--grey .advantages__number {
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.advantages__item--grey h2 {
   color: #000000;
 }
 
@@ -55,11 +69,26 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
   }
 
   .advantages__item--blue {
     width: 33%;
-    height: 256px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .advantages__description,
+  .advantages__title {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .advantages__number {
+    margin-bottom: 20px;
   }
 
   .advantages__image {
@@ -69,11 +98,34 @@
   }
 
   .advantages__image img {
+    height: 256px;
+  }
+
+  li.advantages__item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .advantages__image img {
     width: 100%;
   }
 
   .advantages__item--grey {
-    width: 33%;
+    width: 100%/3;
+    flex-direction: column;
+    border: none;
+    height: 256px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .advantages__item--grey h2 {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .advantages__item--grey p {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 

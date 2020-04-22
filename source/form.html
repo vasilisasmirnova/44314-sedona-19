@@ -19,7 +19,7 @@
               <li class="site-list__item">
                   <a href="photo.html">Фото и видео</a>
               </li>
-              <li class="site-list__item">
+              <li class="site-list__item-active">
                   <a>Форма отзыва</a>
               </li>
               <li class="site-list__item">
@@ -44,6 +44,61 @@
         <p class="banner__slogan">Sedona</p>
       </div>
     </section>
+
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <p>Представьтесь:</p>
+          <label for="name-field">Имя*:</label>
+          <input type="text" name="name" id="name-field" required>
+      <br>
+      <br>
+          <label for="surname-field">Фамилия*:</label>
+          <input type="text" name="surname" id="surname-field" required>
+      <br>
+      <br>
+          <label for="patronym-field">Отчество:</label>
+          <input type="text" name="patronym" id="patronym-field">
+      <br>
+      <p>Контактная информация:</p>
+          <label for="phone-field">Контактный телефон*:</label>
+          <input type="text" name="phone" id="phone-field" value="Введите телефон" required>
+      <br>
+      <br>
+          <label for="email-field">Электронная почта*:</label>
+          <input type="text" name="email" id="email-field" value="Введите e-mail" required>
+      <br>
+      <br>
+      <p>Ваше общее впечатление:</p>
+          <label>
+              <input type="radio" name="question-one" value="positive" checked>Скорее положительное
+          </label>
+          <br>
+          <label>
+              <input type="radio" name="question-one" value="negative">Скорее отрицательное
+          </label>
+          <br>
+          <label>
+              <input type="radio" name="question-one" value="neutral">Затрудняюсь ответить
+          </label>
+      <br>
+      <br>
+      <p>Посещенные достопримечательности:</p>
+          <input type="checkbox" name="landmarks" id="devils-bridge" checked>
+          <label for="subscribe-field">Мост Дьявола</label>
+      <br>
+          <input type="checkbox" name="landmarks" id="bell-mountain" checked>
+          <label for="subscribe-field">Гора-Колокол</label>
+      <br>
+          <input type="checkbox" name="landmarks" id="slide-park" checked>
+          <label for="subscribe-field">Слайд-парк</label>
+      <br>
+          <input type="checkbox" name="landmarks" id="red-rocks">
+          <label for="subscribe-field">Красные скалы</label>
+      <br>
+      <p>Опишите свои эмоции:</p>
+          <textarea name="comment" id="comment-field" rows="10" cols="50">Опишите подробно все свои восторги</textarea>
+      <br>
+      <input type="submit" value="Отправить отзыв">
+  </form>
 
   </main>
 
