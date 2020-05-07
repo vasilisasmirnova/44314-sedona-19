@@ -1,0 +1,397 @@
+.feedback-form {
+  width: 280px;
+  .margin-center();
+}
+
+.feedback-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: solid 1px #e5e5e5;
+}
+
+.feedback-form legend {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 20px 0;
+}
+
+.feedback-form__group {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20px;
+  width: 280px;
+}
+
+.feedback-form__group:last-child {
+  padding-bottom: 25px;
+}
+
+.feedback-form label {
+  .grey_text();
+}
+
+.feedback-form input[type="text"],
+.feedback-form input[type="tel"],
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  font: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  border: none;
+  background-color: #f2f2f2;
+  padding: 16px 20px;
+}
+
+.feedback-form input[type="text"]:hover,
+.feedback-form input[type="tel"]:hover,
+.feedback-form input[type="email"]:hover,
+.feedback-form textarea:hover {
+  background-color: #e5e5e5;
+}
+
+.feedback-form input[type="text"]:focus,
+.feedback-form input[type="tel"]:focus,
+.feedback-form input[type="email"]:focus,
+.feedback-form textarea:focus {
+  background-color: #ffffff;
+  border: solid 4px #e5e5e5;
+  padding: 11px 16px;
+}
+
+.feedback-form__name input {
+  margin-left: 10px;
+  flex-grow: 2;
+  width: 100%;
+}
+
+.feedback-form__contacts-label-desktop {
+  display: none;
+}
+
+.feedback-form__contacts .feedback-form__group {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+}
+
+.feedback-form__contacts .feedback-form__group:last-child {
+  padding-bottom: 28px;
+}
+
+.feedback-form__contacts label {
+  padding-bottom: 10px;
+  padding-left: 22px;
+}
+
+.feedback-form__contacts input {
+  width: 182px;
+}
+
+.feedback-form__contacts-icon {
+  width: 18px;
+  height: 18px;
+  background-color: #e6e6e6;
+  padding: 20px;
+}
+
+.feedback-form__experience input[type="radio"],
+.feedback-form__landmarks input[type="checkbox"] {
+  display: none;
+}
+
+.feedback-form__experience legend {
+  padding-bottom: 40px;
+}
+
+.feedback-form__experience label,
+.feedback-form__landmarks label {
+  position: relative;
+  padding-left: 75px;
+  margin-bottom: 42px;
+  cursor: pointer;
+  display: flex;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: none;
+  color: #000000;
+  font-weight: bold;
+}
+
+.feedback-form__experience label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  background-color: #f2f2f2;
+  width: 22px;
+  height: 22px;
+  border: solid 17px #f2f2f2;
+  border-radius: 50%;
+}
+
+.feedback-form__experience input[type="radio"]:hover + label::before,
+.feedback-form__landmarks input[type="checkbox"]:hover + label::before {
+  border-color: #e5e5e5;
+  background-color: #e5e5e5;
+}
+
+.feedback-form__experience input[type="radio"]:active + label::before,
+.feedback-form__landmarks input[type="checkbox"]:active + label::before {
+  border-color: #d5d5d5;
+  background-color: #d5d5d5;
+}
+
+.feedback-form__experience input[type="radio"]:checked + label::before {
+  background-color: #333333;
+}
+
+.feedback-form__experience input[type="radio"]:checked:active + label::before {
+  background-color: rgba(51, 51, 51, 0.3);
+}
+
+.feedback-form__experience label:last-child {
+  margin-bottom: 40px;
+}
+
+.feedback-form__landmarks legend {
+  padding-bottom: 35px;
+}
+
+.feedback-form__landmarks label {
+  margin-bottom: 52px;
+}
+
+.feedback-form__landmarks label:last-child {
+  margin-bottom: 40px;
+}
+
+.feedback-form__landmarks label::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  background-color: #f2f2f2;
+  width: 51px;
+  height: 51px;
+  border: solid 5px #f2f2f2;
+  border-radius: 5px;
+}
+
+.feedback-form__landmarks input[type="checkbox"]:checked + label::before {
+  background: url("../img/icon-tick.svg") no-repeat;
+  fill: #f2f2f2;
+}
+
+.feedback-form fieldset:last-child {
+  border-bottom: none;
+  padding-bottom: 50px;
+}
+
+.feedback-form__comments textarea {
+  width: 240px;
+  min-height: 128px;
+}
+
+.feedback-form__button {
+  width: 280px;
+  height: 58px;
+  background-color: #81b3d2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.feedback-form__button:hover {
+  background-color: #669ec0;
+}
+
+.feedback-form__button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.feedback-form__legend {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback-form {
+    width: 648px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feedback-form fieldset {
+    border-bottom: none;
+  }
+
+  .feedback-form__contacts legend,
+  .feedback-form__comments legend {
+    width: 400px;
+  }
+
+  .feedback-form__landmarks legend {
+    width: 350px;
+    padding-left: 50px;
+  }
+
+  .feedback-form__contacts legend::before,
+  .feedback-form__landmarks legend::before,
+  .feedback-form__comments legend::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -124px;
+    background-color: #e5e5e5;
+    width: 124px;
+    height: 1px;
+  }
+
+  .feedback-form__contacts legend::after,
+  .feedback-form__landmarks legend::after,
+  .feedback-form__comments legend::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -124px;
+    background-color: #e5e5e5;
+    width: 124px;
+    height: 1px;
+  }
+
+  .feedback-form__experience {
+    order: -1;
+  }
+
+  .feedback-form__contacts,
+  .feedback-form__contacts .feedback-form__group,
+  .feedback-form__landmarks,
+  .feedback-form__comments {
+    width: 100%;
+  }
+
+  .feedback-form__contacts input {
+    width: 550px;
+  }
+
+  .feedback-form__landmarks label {
+    width: 230px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .feedback-form__comments textarea {
+    width: 608px;
+    min-height: 160px;
+    margin-bottom: 58px;
+    margin-top: 30px;
+  }
+
+  .feedback-form__legend {
+    display: flex;
+    align-items: center;
+    .grey_text();
+    line-height: 26px;
+  }
+
+  .feedback-form__button {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback-form {
+    width: 960px;
+  }
+
+  .feedback-form__contacts-label {
+    display: none;
+  }
+
+  .feedback-form__contacts-label-desktop {
+    display: flex;
+  }
+
+  .feedback-form__experience,
+  .feedback-form__name {
+    width: 400px;
+  }
+
+  .feedback-form__name legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .feedback-form__name .feedback-form__group {
+    width: 100%;
+  }
+
+  .feedback-form__contacts legend::before,
+  .feedback-form__landmarks legend::before,
+  .feedback-form__comments legend::before {
+    top: 50%;
+    left: -280px;
+    background-color: #e5e5e5;
+    width: 280px;
+    height: 1px;
+  }
+
+  .feedback-form__contacts legend::after,
+  .feedback-form__landmarks legend::after,
+  .feedback-form__comments legend::after {
+    top: 50%;
+    right: -280px;
+    background-color: #e5e5e5;
+    width: 280px;
+    height: 1px;
+  }
+
+  .feedback-form__contacts div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .feedback-form__contacts .feedback-form__group {
+    width: 400px;
+  }
+
+  .feedback-form__contacts .feedback-form__group:last-child {
+    width: 480px;
+  }
+
+  .feedback-form__contacts label {
+    padding: 0;
+    align-self: center;
+    flex-grow: 1;
+  }
+
+  .feedback-form__contacts input[type="tel"],
+  .feedback-form__contacts input[type="email"] {
+    width: 217px;
+  }
+
+  .feedback-form__comments textarea {
+    width: 920px;
+  }
+
+  .feedback-form__button {
+    width: 480px;
+  }
+}
