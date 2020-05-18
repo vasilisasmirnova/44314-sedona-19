@@ -8,10 +8,9 @@
 
 .main-nav__list {
   .list-reset();
-  list-style: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .main-nav__open {
@@ -39,8 +38,6 @@
 }
 
 .main-nav__icon-menu {
-  width: 23px;
-  height: 22px;
   fill: #81b3d2;
 }
 
@@ -68,8 +65,6 @@
 }
 
 .main-nav__icon-cross {
-  width: 23px;
-  height: 22px;
   fill: #ffffff;
 }
 
@@ -93,6 +88,10 @@
   .main-nav--nojs .site-list {
     display: block;
   }
+
+  .main-nav__open--hide {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -105,8 +104,12 @@
   }
 
   .main-nav__list {
-    .list-reset();
+    justify-content: flex-start;
     flex-direction: row;
+  }
+
+  .main-nav__list li:nth-child(3) {
+    margin-left: auto;
   }
 }
 
@@ -115,6 +118,5 @@
     width: @desktop-width;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-between;
   }
 }
