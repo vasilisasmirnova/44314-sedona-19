@@ -1,0 +1,53 @@
+.map__intro {
+  padding-top: 35px;
+}
+
+.map__intro--header {
+  font-size: 21px;
+}
+
+.map__intro--text {
+  width: 280px;
+  .margin-center();
+}
+
+.map__button {
+  display: block;
+  width: 280px;
+  height: 40px;
+  .margin-center();
+  margin-top: 35px;
+  margin-bottom: 39px;
+  text-align: center;
+  padding-top: 18px;
+  text-decoration: none;
+}
+
+.map__google {
+  width: 100%;
+  min-width: 320px;
+  height: 350px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__intro--text {
+    width: 458PX;
+  }
+
+  .map__intro--header {
+    font-size: 30px;
+  }
+
+  .map__button {
+    width: 458PX;
+    margin-top: 40px;
+    margin-bottom: 58PX;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map__google--wrapper {
+    width: 1200px;
+    .margin-center();
+  }
+}

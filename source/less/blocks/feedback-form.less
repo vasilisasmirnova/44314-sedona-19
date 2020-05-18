@@ -1,6 +1,8 @@
 .feedback-form {
+  position: relative;
   width: 280px;
   .margin-center();
+  margin-bottom: 35px;
 }
 
 .feedback-form fieldset {
@@ -40,14 +42,20 @@
 .feedback-form input[type="tel"],
 .feedback-form input[type="email"],
 .feedback-form textarea {
+  border: none;
+  background-color: #f2f2f2;
+  padding: 21px 20px 22px;
+}
+
+.feedback-form input[type="text"]::placeholder,
+.feedback-form input[type="tel"]::placeholder,
+.feedback-form input[type="email"]::placeholder,
+.feedback-form textarea::placeholder {
   font: inherit;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   color: #000000;
-  border: none;
-  background-color: #f2f2f2;
-  padding: 16px 20px;
 }
 
 .feedback-form input[type="text"]:hover,
@@ -76,19 +84,26 @@
   display: none;
 }
 
-.feedback-form__contacts .feedback-form__group {
+fieldset.feedback-form__contacts {
+  display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-bottom: 15px;
-}
-
-.feedback-form__contacts .feedback-form__group:last-child {
   padding-bottom: 28px;
 }
 
 .feedback-form__contacts label {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.feedback-form input[type="tel"] {
+  margin-bottom: 14px;
+}
+
+.feedback-form__contacts-label {
   padding-bottom: 10px;
   padding-left: 22px;
+  flex-basis: 100%;
 }
 
 .feedback-form__contacts input {
@@ -162,7 +177,7 @@
 }
 
 .feedback-form__landmarks legend {
-  padding-bottom: 35px;
+  margin-bottom: 15px;
 }
 
 .feedback-form__landmarks label {
@@ -186,18 +201,30 @@
 }
 
 .feedback-form__landmarks input[type="checkbox"]:checked + label::before {
-  background: url("../img/icon-tick.svg") no-repeat;
-  fill: #f2f2f2;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f2f2f2;
 }
 
-.feedback-form fieldset:last-child {
-  border-bottom: none;
-  padding-bottom: 50px;
+.feedback-form__landmarks input[type="checkbox"]:checked:hover + label::before {
+  background-color: #e5e5e5;
+}
+
+.feedback-form__landmarks input[type="checkbox"]:checked:active + label::before {
+  background-color: #d5d5d5;
+
 }
 
 .feedback-form__comments textarea {
-  width: 240px;
+  width: 250px;
   min-height: 128px;
+  padding: 15px;
+}
+
+fieldset.feedback-form__comments {
+  padding-bottom: 42px;
+  border-bottom: none;
 }
 
 .feedback-form__button {
@@ -234,10 +261,47 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 60px;
   }
 
   .feedback-form fieldset {
     border-bottom: none;
+  }
+
+  .feedback-form__name {
+    position: relative;
+  }
+
+  .feedback-form__name::before {
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    left: -50px;
+    background-color: #e5e5e5;
+    width: 1px;
+    height: 292px;
+  }
+
+  .feedback-form__name legend {
+    text-align: left;
+    padding-bottom: 55px;
+  }
+
+  .feedback-form__experience legend {
+    text-align: left;
+    padding-bottom: 75px;
+  }
+
+  .feedback-form__experience label {
+    margin-bottom: 50px;
+  }
+
+  fieldset.feedback-form__contacts {
+    margin-top: 20px;
+  }
+
+  .feedback-form input[type="tel"] {
+    margin-bottom: 25px;
   }
 
   .feedback-form__contacts legend,
@@ -247,7 +311,6 @@
 
   .feedback-form__landmarks legend {
     width: 350px;
-    padding-left: 50px;
   }
 
   .feedback-form__contacts legend::before,
@@ -289,18 +352,27 @@
     width: 550px;
   }
 
-  .feedback-form__landmarks label {
-    width: 230px;
+  fieldset.feedback-form__landmarks {
+    .margin-center();
+    width: 460px;
+    display: flex;
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
   }
 
+  .feedback-form__landmarks .feedback-form__group {
+    width: 220px;
+  }
+
   .feedback-form__comments textarea {
-    width: 608px;
-    min-height: 160px;
-    margin-bottom: 58px;
+    width: 618px;
+    min-height: 130px;
+    margin-bottom: 55px;
     margin-top: 30px;
+  }
+
+  fieldset.feedback-form__comments {
+    padding-bottom: 0;
   }
 
   .feedback-form__legend {
@@ -318,9 +390,10 @@
 @media (min-width: @desktop-width) {
   .feedback-form {
     width: 960px;
+    margin-bottom: 66px;
   }
 
-  .feedback-form__contacts-label {
+  .feedback-form__contacts-label-nondesktop {
     display: none;
   }
 
@@ -328,9 +401,17 @@
     display: flex;
   }
 
+  .feedback-form__contacts-label {
+    flex-basis: auto;
+  }
+
   .feedback-form__experience,
   .feedback-form__name {
     width: 400px;
+  }
+
+  .feedback-form__name::before {
+    left: -80px;
   }
 
   .feedback-form__name legend {
@@ -378,8 +459,6 @@
 
   .feedback-form__contacts label {
     padding: 0;
-    align-self: center;
-    flex-grow: 1;
   }
 
   .feedback-form__contacts input[type="tel"],
@@ -388,7 +467,7 @@
   }
 
   .feedback-form__comments textarea {
-    width: 920px;
+    width: 930px;
   }
 
   .feedback-form__button {
