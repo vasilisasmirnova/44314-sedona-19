@@ -25,8 +25,8 @@
 .advantages__item--blue {
   background-color: #81b3d2;
   color: #ffffff;
-  padding-top: 37px;
-  padding-bottom: 37px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .advantages__image {
@@ -39,7 +39,16 @@
 
 .advantages__number {
   margin-top: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.advantages__description {
+  width: 265px;
+  .margin-center();
+}
+
+.advantages__description br {
+  display: none;
 }
 
 .advantages__item--grey {
@@ -57,6 +66,10 @@
 .advantages__item--grey .advantages__number {
   margin-top: 10px;
   margin-bottom: 14px;
+}
+
+.advantages__item--grey .advantages__description {
+  width: 250px;
 }
 
 .advantages__item--grey h2 {
@@ -77,6 +90,10 @@
     width: 100%;
   }
 
+  .advantages__title {
+    font-size: 21px;
+  }
+
   .advantages__item--blue {
     width: 33%;
     padding-top: 40px;
@@ -88,8 +105,13 @@
 
   .advantages__description,
   .advantages__title {
+    width: auto;
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .advantages__description br {
+    display: inline;
   }
 
   .advantages__number {
@@ -103,7 +125,6 @@
   }
 
   .advantages__image img {
-    height: 256px;
     width: 100%;
   }
 
@@ -125,9 +146,9 @@
     padding-right: 70px;
   }
 
-  .advantages__item--grey p {
-    padding-left: 50px;
-    padding-right: 50px;
+  .advantages__item--grey .advantages__description {
+    width: auto;
+    padding: 0 45px;
   }
 }
 
@@ -136,5 +157,42 @@
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .advantages__item--blue {
+    width: 400px;
+  }
+
+  .advantages__image {
+    width: 800px;
+    height: 256px;
+  }
+
+  .advantages__image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .advantages__title {
+    width: 160px;
+    .margin-center();
+  }
+
+  .advantages__description br {
+    display: none;
+  }
+
+  .advantages__description {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .advantages__item--grey {
+    height: 236px;
+    padding-bottom: 20px;
+  }
+
+  .advantages__item--grey .advantages__number {
+    margin-bottom: 20px;
   }
 }

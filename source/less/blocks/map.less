@@ -1,14 +1,20 @@
 .map__intro {
-  padding-top: 35px;
+  padding-top: 28px;
 }
 
 .map__intro--header {
   font-size: 21px;
+  text-align: center;
+  margin-bottom: 22px;
 }
 
 .map__intro--text {
   width: 280px;
   .margin-center();
+}
+
+.map__intro--text br {
+  display: none;
 }
 
 .map__button {
@@ -17,7 +23,7 @@
   height: 40px;
   .margin-center();
   margin-top: 35px;
-  margin-bottom: 39px;
+  margin-bottom: 48px;
   text-align: center;
   padding-top: 18px;
   text-decoration: none;
@@ -30,12 +36,21 @@
 }
 
 @media (min-width: @tablet-width) {
+  .map__intro {
+    padding-top: 55px;
+  }
+
   .map__intro--text {
     width: 458px;
   }
 
+  .map__intro--text br {
+    display: inline;
+  }
+
   .map__intro--header {
     font-size: 30px;
+    margin-bottom: 35px;
   }
 
   .map__button {
@@ -49,5 +64,10 @@
   .map__google--wrapper {
     width: 1200px;
     .margin-center();
+  }
+
+  .map__button {
+    margin-top: 47px;
+    margin-bottom: 65px;
   }
 }

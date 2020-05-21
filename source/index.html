@@ -2,10 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
   <header class="page-header">
     <nav class="main-nav">
@@ -62,17 +67,16 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="img/bg-intro-triangle-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/bg-intro-triangle-tablet.svg">
-          <img class="banner__triangle" src="img/bg-intro-triangle-mobile.svg" width="1201" height="57">
+          <img class="banner__triangle" src="img/bg-intro-triangle-mobile.svg" width="1201" height="57" alt="Треугольник">
         </picture>
       </div>
     </section>
 
     <section class="intro intro--index">
       <div class="intro__wrapper">
-        <h1 class="intro__header">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+        <h1 class="intro__header">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</h1>
         <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
       </div>
-      <svg class="intro__triangle"  viewBox="440.469 30.889 320 26.111"><path d="M760.469 57V30.889L599.955 57zm-320 0h159.486L440.469 31.056z"/></svg>
     </section>
 
     <section class="advantages">
@@ -81,8 +85,8 @@
             <li class="advantages__item">
               <div class="advantages__item--blue">
                 <h2 class="advantages__title">Настоящий городок</h2>
-                <p class="advantages__number">- №1 -</p>
-                <p class="advantages__description">Седона не аттракцион для туристов, там течет своя жизнь</p>
+                <p class="advantages__number">&mdash; №1 &mdash;</p>
+                <p class="advantages__description">Седона не аттракцион для туристов, там <br>течет своя жизнь</p>
               </div>
               <picture class="advantages__image">
                 <source type="image/webp" media="(min-width: 1200px)" srcset="img/main-city-desktop@1x.webp 1x, img/main-city-desktop@2x.webp 2x">
@@ -114,15 +118,15 @@
                         <use xlink:href="img/sprite.svg#icon-burger"></use>
                       </svg>
                       <h3 class="sub-advantages__header">Еда</h3>
-                      <p class="sub-advantages__description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                      <p class="sub-advantages__description">Всегда заказывайте фирменный бургер,&nbsp;<br>Вы не разочаруетесь!</p>
                     </li>
                   </ul>
               </div>
             </li>
             <li class="advantages__item">
               <div class="advantages__item--blue">
-                <h2 class="advantages__title">Там есть Мост Дьявола</h2>
-                <p class="advantages__number">- №2 -</p>
+                <h2 class="advantages__title">Там есть <br>Мост Дьявола</h2>
+                <p class="advantages__number">&mdash; №2 &mdash;</p>
                 <p class="advantages__description">Да, по нему можно пройти! Если Вы осмелитесь, конечно</p>
               </div>
               <picture class="advantages__image">
@@ -136,17 +140,17 @@
             </li>
             <li class="advantages__item advantages__item--grey">
               <h2 class="advantages__title">Небольшая площадь</h2>
-              <p class="advantages__number">- №3 -</p>
+              <p class="advantages__number">&mdash; №3 &mdash;</p>
               <p class="advantages__description">Все интересные места находятся очень близко</p>
             </li>
             <li class="advantages__item advantages__item--grey">
               <h2 class="advantages__title">Красивая дорога</h2>
-              <p class="advantages__number">- №4 -</p>
-              <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <p class="advantages__number">&mdash; №4 &mdash;</p>
+              <p class="advantages__description">Ехать в Седону из <br>Лас-Вегаса совсем <br>не скучно!</p>
             </li>
             <li class="advantages__item advantages__item--grey">
               <h2 class="advantages__title">Мало туристов</h2>
-              <p class="advantages__number">- №5 -</p>
+              <p class="advantages__number">&mdash; №5 &mdash;</p>
               <p class="advantages__description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
         </ul>
@@ -155,19 +159,19 @@
 
     <section class="map">
       <div class="map__intro">
-        <h2 class="map__intro--header popup__header">Заинтересовались?</h2>
-        <p class="map__intro--text popup__text">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+        <h2 class="map__intro--header">Заинтересовались?</h2>
+        <p class="map__intro--text popup__text">Укажите предполагаемые даты поездки, <br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
         <a class="map__button feedback-form__button" href="#" target="_blank">Найти гостиницу</a>
       </div>
       <div class="map__google--wrapper">
-        <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413391.139388747!2d-113.00945627381259!3d34.63344790026102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1589724806539!5m2!1sru!2sru" width="320" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <iframe class="map__google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1413391.139388747!2d-113.00945627381259!3d34.63344790026102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1589724806539!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </div>
     </section>
 
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper page-footer__wrapper--index">
+    <div class="page-footer__wrapper">
       <div class="page-footer__hashtag">
         <p>#visitsedona</p>
       </div>

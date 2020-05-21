@@ -2,7 +2,7 @@
   position: relative;
   width: 280px;
   .margin-center();
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .feedback-form fieldset {
@@ -74,13 +74,17 @@
   padding: 11px 16px;
 }
 
+.feedback-form__name legend {
+  padding-top: 10px;
+}
+
 .feedback-form__name input {
   margin-left: 10px;
   flex-grow: 2;
   width: 100%;
 }
 
-.feedback-form__contacts-label-desktop {
+.feedback-form__contacts-label--desktop {
   display: none;
 }
 
@@ -88,7 +92,7 @@ fieldset.feedback-form__contacts {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-bottom: 28px;
+  padding-bottom: 30px;
 }
 
 .feedback-form__contacts label {
@@ -123,14 +127,15 @@ fieldset.feedback-form__contacts {
 }
 
 .feedback-form__experience legend {
-  padding-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 35px;
 }
 
 .feedback-form__experience label,
 .feedback-form__landmarks label {
   position: relative;
-  padding-left: 75px;
-  margin-bottom: 42px;
+  padding-left: 80px;
+  margin-bottom: 43px;
   cursor: pointer;
   display: flex;
   font-size: 18px;
@@ -180,22 +185,14 @@ fieldset.feedback-form__contacts {
   margin-bottom: 15px;
 }
 
-.feedback-form__landmarks label {
-  margin-bottom: 52px;
-}
-
-.feedback-form__landmarks label:last-child {
-  margin-bottom: 40px;
-}
-
 .feedback-form__landmarks label::before {
   content: "";
   position: absolute;
   top: -15px;
   left: 0;
   background-color: #f2f2f2;
-  width: 51px;
-  height: 51px;
+  width: 46px;
+  height: 46px;
   border: solid 5px #f2f2f2;
   border-radius: 5px;
 }
@@ -213,6 +210,14 @@ fieldset.feedback-form__contacts {
 
 .feedback-form__landmarks input[type="checkbox"]:checked:active + label::before {
   background-color: #d5d5d5;
+}
+
+.feedback-form__landmarks--wrapper .feedback-form__group {
+  padding-bottom: 10px;
+}
+
+.feedback-form__landmarks--wrapper .feedback-form__group:last-child {
+  padding-bottom: 0;
 }
 
 .feedback-form__comments textarea {
@@ -260,14 +265,20 @@ fieldset.feedback-form__comments {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
+    margin-top: 5px;
   }
 
   .feedback-form fieldset {
     border-bottom: none;
   }
 
-  .feedback-form__name {
+  .feedback-form legend {
+    font-size: 21px;
+    padding: 0;
+  }
+
+  fieldset.feedback-form__name {
     position: relative;
   }
 
@@ -275,7 +286,7 @@ fieldset.feedback-form__comments {
     content: "";
     position: absolute;
     bottom: 25px;
-    left: -50px;
+    left: -60px;
     background-color: #e5e5e5;
     width: 1px;
     height: 292px;
@@ -284,6 +295,10 @@ fieldset.feedback-form__comments {
   .feedback-form__name legend {
     text-align: left;
     padding-bottom: 55px;
+  }
+
+  .feedback-form__name .feedback-form__group {
+    width: 265px;
   }
 
   .feedback-form__experience legend {
@@ -296,7 +311,12 @@ fieldset.feedback-form__comments {
   }
 
   fieldset.feedback-form__contacts {
-    margin-top: 20px;
+    margin-top: 50px;
+  }
+
+  .feedback-form__contacts--group {
+    margin-top: 25px;
+    margin-bottom: 23px;
   }
 
   .feedback-form input[type="tel"] {
@@ -310,6 +330,7 @@ fieldset.feedback-form__comments {
 
   .feedback-form__landmarks legend {
     width: 350px;
+    margin-bottom: 55px;
   }
 
   .feedback-form__contacts legend::before,
@@ -351,23 +372,33 @@ fieldset.feedback-form__comments {
     width: 550px;
   }
 
-  fieldset.feedback-form__landmarks {
+  .feedback-form__landmarks--wrapper {
     .margin-center();
-    width: 460px;
+    width: 480px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
-  .feedback-form__landmarks .feedback-form__group {
-    width: 220px;
+  .feedback-form__landmarks--wrapper .feedback-form__group {
+    width: 210px;
+    padding-bottom: 20px;
+  }
+
+  .feedback-form__landmarks--wrapper .feedback-form__group:last-child {
+    padding-bottom: 20px;
+  }
+
+  .feedback-form__landmarks--wrapper .feedback-form__group:first-child,
+  .feedback-form__landmarks--wrapper .feedback-form__group:nth-child(3) {
+    width: 270px;
   }
 
   .feedback-form__comments textarea {
     width: 618px;
     min-height: 130px;
     margin-bottom: 55px;
-    margin-top: 30px;
+    margin-top: 55px;
   }
 
   fieldset.feedback-form__comments {
@@ -389,24 +420,57 @@ fieldset.feedback-form__comments {
 @media (min-width: @desktop-width) {
   .feedback-form {
     width: 960px;
-    margin-bottom: 66px;
+    margin-top: -10px;
+    margin-bottom: 70px;
   }
 
-  .feedback-form__contacts-label-nondesktop {
+  .feedback-form__contacts-label--nondesktop {
     display: none;
   }
 
-  .feedback-form__contacts-label-desktop {
+  .feedback-form__contacts-label--desktop {
     display: flex;
   }
 
   .feedback-form__contacts-label {
     flex-basis: auto;
+    padding: 0;
+  }
+
+  .feedback-form__contacts--group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+
+  .feedback-form__contacts--group label {
+    align-items: center;
+  }
+
+  .feedback-form__contacts--group span {
+    flex-grow: 2;
+  }
+
+  .feedback-form__contacts--group label:first-child {
+    width: 400px;
+  }
+
+  .feedback-form__contacts--group label:last-child {
+    width: 480px;
+  }
+
+  .feedback-form input[type="tel"] {
+    margin: 0;
   }
 
   .feedback-form__experience,
   .feedback-form__name {
     width: 400px;
+  }
+
+  .feedback-form__experience legend {
+    padding-left: 80px;
   }
 
   .feedback-form__name::before {
@@ -421,6 +485,10 @@ fieldset.feedback-form__comments {
 
   .feedback-form__name .feedback-form__group {
     width: 100%;
+  }
+
+  fieldset.feedback-form__contacts {
+    padding-bottom: 25px;
   }
 
   .feedback-form__contacts legend::before,
@@ -463,6 +531,28 @@ fieldset.feedback-form__comments {
   .feedback-form__contacts input[type="tel"],
   .feedback-form__contacts input[type="email"] {
     width: 217px;
+  }
+
+  .feedback-form__landmarks--wrapper {
+    width: 960px;
+    justify-content: space-between;
+  }
+
+  .feedback-form__landmarks--wrapper .feedback-form__group,
+  .feedback-form__landmarks--wrapper .feedback-form__group:first-child,
+  .feedback-form__landmarks--wrapper .feedback-form__group:nth-child(3) {
+    width: 205px;
+    padding-right: 45px;
+  }
+
+  .feedback-form__landmarks--wrapper .feedback-form__group:nth-child(3) {
+    width: 200px;
+    padding-right: 40px;
+    padding-left: 10px;
+  }
+
+  .feedback-form__landmarks--wrapper .feedback-form__group:last-child {
+    padding-right: 0;
   }
 
   .feedback-form__comments textarea {
