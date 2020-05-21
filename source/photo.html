@@ -2,10 +2,15 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
+
+    <div style="display:none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
 
     <header class="page-header">
       <nav class="main-nav">
@@ -58,7 +63,7 @@
         <picture>
           <source media="(min-width: 1200px)" srcset="img/bg-intro-triangle-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/bg-intro-triangle-tablet.svg">
-          <img class="banner__triangle" src="img/bg-intro-triangle-mobile.svg" width="1201" height="57">
+          <img class="banner__triangle" src="img/bg-intro-triangle-mobile.svg" width="1201" height="57" alt="Треугольник">
         </picture>
       </div>
     </section>
@@ -66,7 +71,7 @@
     <section class="intro">
       <div class="intro__wrapper">
         <h1 class="intro__header">Фото и видео</h1>
-        <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут Вам забыть о политике и экономике.</p>
+        <p class="intro__text">Не можете решиться на путешествие из-за курса? <br>Фотографии помогут Вам забыть о политике и экономике.</p>
       </div>
     </section>
 
