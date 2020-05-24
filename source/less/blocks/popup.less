@@ -1,5 +1,4 @@
-.popup-success,
-.popup-failure {
+.popup {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -12,11 +11,11 @@
   box-shadow: 0 7px 15px 7px rgba(0, 1, 1, 0.15);
 }
 
-.popup-success {
+.popup--success {
   display: none;
 }
 
-.popup-failure {
+.popup--failure {
   display: none;
 }
 
@@ -34,7 +33,7 @@
   text-align: center;
 }
 
-.popup-failure .popup__text {
+.popup--failure .popup__text {
   width: 230px;
   .margin-center();
 }
@@ -56,24 +55,24 @@
   height: 40px;
 }
 
-.popup-failure .popup__header {
+.popup--failure .popup__header {
   margin-bottom: 24px;
 }
 
-.popup-failure .popup__close {
+.popup--failure .popup__close {
   background-color: #ffffff;
   padding-top: 25px;
   padding-bottom: 35px;
   margin-top: 0;
 }
 
-.popup-failure .popup__close a {
+.popup--failure .popup__close a {
   width: 180px;
   .margin-center();
 }
 
 @media (min-width: @tablet-width) {
-  .popup-success {
+  .popup--success {
     width: 420px;
     margin-left: -320px;
     padding-left: 110px;
@@ -81,7 +80,7 @@
     padding-top: 60px;
   }
 
-  .popup-failure {
+  .popup--failure {
     width: 290px;
     margin-left: -200px;
     padding-left: 55px;
@@ -102,7 +101,7 @@
     background-color: #f2f2f2;
   }
 
-  .popup-failure .popup__close a {
+  .popup--failure .popup__close a {
     width: 272px;
   }
 
@@ -110,14 +109,14 @@
     width: 458px;
   }
 
-  .popup-failure .popup__header {
+  .popup--failure .popup__header {
     line-height: 40px;
     margin-bottom: 30px;
     padding-right: 30px;
     padding-left: 30px;
   }
 
-  .popup-failure .popup__close {
+  .popup--failure .popup__close {
     background-color: #ffffff;
     width: 272px;
     padding-top: 35px;

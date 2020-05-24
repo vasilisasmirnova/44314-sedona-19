@@ -3,6 +3,8 @@
   padding-top: 22px;
   line-height: 24px;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-item__image {
@@ -29,7 +31,7 @@
   text-transform: none;
 }
 
-.photo-item__likes--image {
+.photo-item__likes-image {
   fill: rgba(0, 0, 0, 0.3);
   margin-right: 13px;
 }
@@ -59,9 +61,16 @@
 
   .photo-item__description {
     height: 48px;
-    padding: 16px 20px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 20px;
+    padding-right: 32px;
     flex-direction: column;
     align-content: space-between;
+  }
+
+  .photo-item:first-child .photo-item__description {
+    padding-right: 20px;
   }
 
   .photo-item__header {
@@ -104,7 +113,7 @@
     height: 400px;
   }
 
-  .photo-item__likes--image {
+  .photo-item__likes-image {
     fill: #ffffff;
   }
 }

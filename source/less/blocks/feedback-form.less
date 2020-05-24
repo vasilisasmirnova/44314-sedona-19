@@ -44,14 +44,17 @@
 .feedback-form textarea {
   border: none;
   background-color: #f2f2f2;
-  padding: 21px 20px 22px;
+  padding-top: 23px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 20px;
 }
 
 .feedback-form input[type="text"]::placeholder,
 .feedback-form input[type="tel"]::placeholder,
 .feedback-form input[type="email"]::placeholder,
 .feedback-form textarea::placeholder {
-  font: inherit;
+  font-family: "PT Sans";
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -71,15 +74,18 @@
 .feedback-form textarea:focus {
   background-color: #ffffff;
   border: solid 4px #e5e5e5;
-  padding: 11px 16px;
+  padding-top: 19px;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  padding-right: 16px;
 }
 
 .feedback-form__name legend {
-  padding-top: 10px;
+  padding-top: 18px;
 }
 
 .feedback-form__name input {
-  margin-left: 10px;
+  margin-left: 14px;
   flex-grow: 2;
   width: 100%;
 }
@@ -111,7 +117,7 @@ fieldset.feedback-form__contacts {
 }
 
 .feedback-form__contacts input {
-  width: 182px;
+  width: 178px;
 }
 
 .feedback-form__contacts-icon {
@@ -183,6 +189,8 @@ fieldset.feedback-form__contacts {
 
 .feedback-form__landmarks legend {
   margin-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 .feedback-form__landmarks label::before {
@@ -221,9 +229,19 @@ fieldset.feedback-form__contacts {
 }
 
 .feedback-form__comments textarea {
-  width: 250px;
-  min-height: 128px;
-  padding: 15px;
+  width: 245px;
+  min-height: 132px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.feedback-form__comments textarea:focus {
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+  padding-right: 11px;
 }
 
 fieldset.feedback-form__comments {
@@ -252,6 +270,11 @@ fieldset.feedback-form__comments {
 .feedback-form__button:active {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
+}
+
+.feedback-form__button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 .feedback-form__legend {
@@ -303,15 +326,16 @@ fieldset.feedback-form__comments {
 
   .feedback-form__experience legend {
     text-align: left;
-    padding-bottom: 75px;
+    padding-bottom: 73px;
   }
 
   .feedback-form__experience label {
-    margin-bottom: 50px;
+    margin-bottom: 51px;
+    padding-left: 75px;
   }
 
   fieldset.feedback-form__contacts {
-    margin-top: 50px;
+    margin-top: 47px;
   }
 
   .feedback-form__contacts--group {
@@ -369,7 +393,7 @@ fieldset.feedback-form__comments {
   }
 
   .feedback-form__contacts input {
-    width: 550px;
+    width: 546px;
   }
 
   .feedback-form__landmarks--wrapper {
@@ -391,14 +415,20 @@ fieldset.feedback-form__comments {
 
   .feedback-form__landmarks--wrapper .feedback-form__group:first-child,
   .feedback-form__landmarks--wrapper .feedback-form__group:nth-child(3) {
-    width: 270px;
+    width: 258px;
+    margin-left: 12px;
   }
 
   .feedback-form__comments textarea {
-    width: 618px;
-    min-height: 130px;
+    width: 613px;
+    min-height: 128px;
+    padding-top: 17px;
     margin-bottom: 55px;
     margin-top: 55px;
+  }
+
+  .feedback-form__comments textarea:focus {
+    padding-top: 13px;
   }
 
   fieldset.feedback-form__comments {
@@ -414,6 +444,7 @@ fieldset.feedback-form__comments {
 
   .feedback-form__button {
     width: 324px;
+    padding: 0;
   }
 }
 
@@ -441,14 +472,15 @@ fieldset.feedback-form__comments {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 45px;
   }
 
   .feedback-form__contacts--group label {
     align-items: center;
   }
 
-  .feedback-form__contacts--group span {
+  .feedback-form__contacts-label--desktop,
+  .feedback-form__contacts-label {
     flex-grow: 2;
   }
 
@@ -473,6 +505,14 @@ fieldset.feedback-form__comments {
     padding-left: 80px;
   }
 
+  .feedback-form__experience label {
+    padding-left: 80px;
+  }
+
+  .feedback-form__experience label::before {
+    left: 5px;
+  }
+
   .feedback-form__name::before {
     left: -80px;
   }
@@ -481,6 +521,7 @@ fieldset.feedback-form__comments {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    padding-bottom: 58px;
   }
 
   .feedback-form__name .feedback-form__group {
@@ -533,6 +574,10 @@ fieldset.feedback-form__comments {
     width: 217px;
   }
 
+  fieldset.feedback-form__landmarks {
+    margin-top: 5px;
+  }
+
   .feedback-form__landmarks--wrapper {
     width: 960px;
     justify-content: space-between;
@@ -543,12 +588,11 @@ fieldset.feedback-form__comments {
   .feedback-form__landmarks--wrapper .feedback-form__group:nth-child(3) {
     width: 205px;
     padding-right: 45px;
+    margin-left: 0;
   }
 
   .feedback-form__landmarks--wrapper .feedback-form__group:nth-child(3) {
-    width: 200px;
-    padding-right: 40px;
-    padding-left: 10px;
+    width: 180px;
   }
 
   .feedback-form__landmarks--wrapper .feedback-form__group:last-child {
