@@ -2,18 +2,21 @@
   padding-top: 30px;
 }
 
-.map__intro--header {
+.map__header {
   font-size: 21px;
   text-align: center;
   margin-bottom: 22px;
 }
 
-.map__intro--text {
+.map__text {
   width: 280px;
   .margin-center();
+  .grey_text();
+  line-height: 24px;
+  text-align: center;
 }
 
-.map__intro--text br {
+.map__text br {
   display: none;
 }
 
@@ -27,6 +30,29 @@
   text-align: center;
   padding-top: 18px;
   text-decoration: none;
+  background-color: #81b3d2;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  font-size: 21px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.map__button:hover {
+  background-color: #669ec0;
+}
+
+.map__button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.map__button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 .map__google {
@@ -40,15 +66,15 @@
     padding-top: 55px;
   }
 
-  .map__intro--text {
+  .map__text {
     width: 458px;
   }
 
-  .map__intro--text br {
+  .map__text br {
     display: inline;
   }
 
-  .map__intro--header {
+  .map__header {
     font-size: 30px;
     margin-bottom: 35px;
   }
@@ -61,7 +87,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .map__google--wrapper {
+  .map__wrapper {
     width: 1200px;
     .margin-center();
   }

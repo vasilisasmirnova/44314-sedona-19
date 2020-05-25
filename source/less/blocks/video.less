@@ -8,10 +8,20 @@
   padding-top: 35px;
   padding-bottom: 0;
   margin-bottom: 110px;
+  .margin-center();
+}
+
+.video__header {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .video__text {
+  .grey_text();
   line-height: 24px;
+  text-align: center;
   margin-top: 25px;
   margin-bottom: 35px;
   padding: 0 35px;
@@ -25,21 +35,21 @@
   .margin-center();
 }
 
-.video__controls--volume {
+.video__volume {
   display: flex;
   position: relative;
   height: 45px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.video__controls--volume-scale {
+.video__scale {
   width: 235px;
   height: 3px;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.video__controls--volume-toggle {
+.video__toggle {
   position: absolute;
   top: 18px;
   left: 63px;
@@ -49,7 +59,7 @@
   cursor: pointer;
 }
 
-.video__controls--buttons {
+.video__buttons {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,26 +69,26 @@
   background-color: #f2f2f2;
 }
 
-.video__controls--buttons-replay,
-.video__controls--buttons-subtitles,
-.video__controls--buttons-fullscreen {
+.video__replay,
+.video__subtitles,
+.video__fullscreen {
   fill: #5c6870;
   cursor: pointer;
 }
 
-.video__controls--buttons-replay:hover,
-.video__controls--buttons-subtitles:hover,
-.video__controls--buttons-fullscreen:hover {
+.video__replay:hover,
+.video__subtitles:hover,
+.video__fullscreen:hover {
   fill: #333333;
 }
 
-.video__controls--buttons-replay:active,
-.video__controls--buttons-subtitles:active,
-.video__controls--buttons-fullscreen:active {
+.video__replay:active,
+.video__subtitles:active,
+.video__fullscreen:active {
   fill: rgba(51, 51, 51, 0.3);
 }
 
-.video__controls--buttons-subtitles {
+.video__subtitles {
   margin-right: 31px;
   margin-left: auto;
 }
@@ -106,12 +116,12 @@
     width: 648px;
   }
 
-  .video__controls--volume {
+  .video__volume {
     height: 93px;
     margin-top: -93px;
   }
 
-  .video__controls--buttons {
+  .video__buttons {
     position: relative;
     padding-left: 35px;
     padding-right: 41px;
@@ -121,33 +131,33 @@
     background-color: rgba(0, 0, 0, 0);
   }
 
-  .video__controls--volume-toggle {
+  .video__toggle {
     z-index: 3;
     top: 42px;
     left: 207px;
   }
 
-  .video__controls--volume-scale {
+  .video__scale {
     width: 389px;
     margin-top: 45px;
     margin-left: 93px;
   }
 
-  .video__controls--buttons-replay,
-  .video__controls--buttons-subtitles,
-  .video__controls--buttons-fullscreen {
+  .video__replay,
+  .video__subtitles,
+  .video__fullscreen {
     fill: #ffffff;
   }
 
-  .video__controls--buttons-replay:hover,
-  .video__controls--buttons-subtitles:hover,
-  .video__controls--buttons-fullscreen:hover {
+  .video__replay:hover,
+  .video__subtitles:hover,
+  .video__fullscreen:hover {
     fill: rgba(255, 255, 255, 0.6);
   }
 
-  .video__controls--buttons-replay:active,
-  .video__controls--buttons-subtitles:active,
-  .video__controls--buttons-fullscreen:active {
+  .video__replay:active,
+  .video__subtitles:active,
+  .video__fullscreen:active {
     fill: rgba(255, 255, 255, 0.3);
   }
 }
@@ -168,7 +178,7 @@
     width: 800px;
   }
 
-  .video__controls--volume-scale {
+  .video__scale {
     width: 540px;
   }
 }
